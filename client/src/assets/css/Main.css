@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+html {
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+h4,
+p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+iframe {
+  padding: 0;
+  margin: 0;
+}
+
+.resize-main-spline {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+}
+
+/*
+@media (min-width: 1620px) {
+  .resize-main-spline {
+    width: auto !important;
+    height: 97% !important;
+    left: 50px;
+  }
+}
+
+@media (min-width: 414px) {
+  .resize-main-spline {
+    width: 400px !important;
+    height: auto !important;
+    left: 50px;
+  } 
+}
+  */
