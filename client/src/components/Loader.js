@@ -6,7 +6,7 @@ const Loader = (props) => {
 
   useEffect(() => {
     if (percent < 100) {
-      setTimeout(() => setPercent(percent + 1), 110);
+      setTimeout(() => setPercent(percent + 1), 135);
     } else if (percent === 100) {
       //props.loadScreen.current.classList.add("fade-out");
     }

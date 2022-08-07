@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 
 export default function FrontPageSpline() {
+  const [spline, setSpline] = useState("");
   const mainSpline = useRef();
 
   const resizeFunc = () => {
@@ -15,6 +16,10 @@ export default function FrontPageSpline() {
   //https://prod.spline.design/asx2bhp61UwCzCLf/scene.splinecode
   //https://prod.spline.design/asx2bhp61UwCzCLf/scene.splinecode
 
+  useEffect(() => {
+    setSpline("https://prod.spline.design/KLYBJGiWlXyZpoxD/scene.splinecode");
+  }, []);
+
   return (
     <div>
       <Spline
@@ -22,7 +27,7 @@ export default function FrontPageSpline() {
         onLoad={() => resizeFunc()}
         id="main-spline"
         className="resize-main-spline"
-        scene="https://prod.spline.design/asx2bhp61UwCzCLf/scene.splinecode"
+        scene={spline}
       />
     </div>
   );
