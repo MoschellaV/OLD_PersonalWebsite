@@ -13,9 +13,6 @@ export default function FrontPageSpline() {
 
   window.addEventListener("resize", resizeFunc);
 
-  //https://prod.spline.design/asx2bhp61UwCzCLf/scene.splinecode
-  //https://prod.spline.design/asx2bhp61UwCzCLf/scene.splinecode
-
   useEffect(() => {
     setSpline("https://prod.spline.design/KLYBJGiWlXyZpoxD/scene.splinecode");
   }, []);
