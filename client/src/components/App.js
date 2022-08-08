@@ -11,7 +11,6 @@ const App = () => {
   const loadScreen = useRef();
 
   useEffect(() => {
-    console.log(permissionRemoveLoader);
     if (permissionRemoveLoader) {
       loadScreen.current.classList.add("fade-out");
       setTimeout(() => {
