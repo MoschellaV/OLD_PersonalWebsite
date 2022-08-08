@@ -34,7 +34,7 @@
 }
 .header .main-header {
   margin: 0;
-  font-size: clamp(3.6rem, 7.1vw, 8.8rem);
+  font-size: clamp(2.6rem, 7.1vw, 8.8rem);
   font-weight: 700;
 }
 .description {
@@ -44,7 +44,7 @@
 }
 .description .main-description {
   font-weight: 500;
-  font-size: clamp(1.4rem, 1.8vw, 2rem);
+  font-size: clamp(1.1rem, 1.8vw, 2rem);
 }
 .orange-liner {
   position: absolute;
@@ -152,29 +152,29 @@
     padding-left: 84vw;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 460px) {
   .resize-main-spline {
     width: 160vw !important;
     height: auto !important;
     left: -90px;
   }
   .header {
-    padding-top: 20vh;
+    padding-top: 16vh;
   }
   .description {
     margin-left: 15%;
     margin-top: 7%;
-    max-width: 340px;
+    max-width: 300px;
   }
   .grid-img {
-    width: 140px;
-    height: 140px;
-    left: 140px;
+    width: 90px;
+    height: 90px;
+    left: 150px;
     top: 100px;
   }
   .icon-div {
-    padding-top: 13vh;
-    padding-left: 84vw;
+    padding-top: 16vh;
+    padding-left: 82vw;
   }
 }
 

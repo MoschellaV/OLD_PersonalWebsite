@@ -6,7 +6,7 @@ export default function FrontPageSpline({ setPermissionRemoveLoader }) {
   const mainSpline = useRef();
 
   useEffect(() => {
-    if (loadedArr.length >= 1) {
+    if (loadedArr.length >= 2) {
       setPermissionRemoveLoader(true);
     }
   }, [loadedArr, setPermissionRemoveLoader]);

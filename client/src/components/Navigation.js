@@ -7,8 +7,8 @@ const Navigation = () => {
   return (
     <Navbar key="lg" expand="lg" fixed="top" className="">
       <Container fluid className="navbar-position">
-        <div style={{ maxWidth: "130px" }}>
-          <Nav.Link href="#">Vince Moschella</Nav.Link>
+        <div>
+          <Nav.Link className="nav-name">Vince Moschella</Nav.Link>
         </div>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
         <Navbar.Offcanvas

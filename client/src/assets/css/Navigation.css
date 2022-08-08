@@ -1,6 +1,9 @@
 .navbar {
   background-color: transparent;
 }
+.nav-name {
+  max-width: 130px;
+}
 .nav-link {
   color: white;
   font-family: "Roboto", sans-serif;
@@ -84,6 +87,13 @@
   transform: scaleX(1);
   transform-origin: center;
 }
+.shrink {
+  transition: all 0.2s ease-in-out;
+}
+.shrink:hover {
+  transform: scale(0.9);
+}
+
 @media (max-width: 991px) {
   .underline-anim::after {
     transform-origin: left;
@@ -93,9 +103,9 @@
     transform-origin: left;
   }
 }
-.shrink {
-  transition: all 0.2s ease-in-out;
-}
-.shrink:hover {
-  transform: scale(0.9);
+@media (max-width: 440px) {
+  .nav-name {
+    font-size: 1rem;
+    max-width: 100px;
+  }
 }

@@ -12,10 +12,12 @@ const App = () => {
 
   useEffect(() => {
     if (permissionRemoveLoader) {
-      loadScreen.current.classList.add("fade-out");
       setTimeout(() => {
-        setLoading(false);
-      }, 1500);
+        loadScreen.current.classList.add("fade-out");
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
+      }, 3000);
     }
   }, [permissionRemoveLoader]);
 
