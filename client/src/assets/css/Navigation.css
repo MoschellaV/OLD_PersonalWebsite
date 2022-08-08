@@ -33,6 +33,9 @@
 .offcanvas-header {
   padding-top: 30px;
 }
+.btn-close {
+  filter: brightness(0) invert(1);
+}
 .btn:focus {
   box-shadow: none !important;
   background-color: transparent;

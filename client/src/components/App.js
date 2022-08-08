@@ -7,23 +7,24 @@ import Loader from "./Loader";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [permissionRemoveLoader, setPermissionRemoveLoader] = useState(false);
   const loadScreen = useRef();
 
   useEffect(() => {
-    setTimeout(() => {
+    console.log(permissionRemoveLoader);
+    if (permissionRemoveLoader) {
       loadScreen.current.classList.add("fade-out");
-
       setTimeout(() => {
         setLoading(false);
       }, 1500);
-    }, 17000);
-  }, []);
+    }
+  }, [permissionRemoveLoader]);
 
   return (
     <div>
       <Loader loading={loading} loadScreen={loadScreen} />
       <Navigation />
-      <Home />
+      <Home setPermissionRemoveLoader={setPermissionRemoveLoader} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import grid from "../assets/images/grid.png";
 import { Container } from "react-bootstrap";
 import FrontPageSpline from "./FrontPageSpline";
 
-const Home = () => {
+const Home = ({ setPermissionRemoveLoader }) => {
   return (
     <Container fluid className="black-background bg-size posiiton-relative">
       <img src={grid} alt="" className="grid-img"></img>
@@ -27,7 +27,7 @@ const Home = () => {
         <i className="shrink pt-2 icons fa-2x fa-brands fa-square-facebook" />
       </div>
 
-      <FrontPageSpline />
+      <FrontPageSpline setPermissionRemoveLoader={setPermissionRemoveLoader} />
       <div className="orange-liner"></div>
     </Container>
   );
