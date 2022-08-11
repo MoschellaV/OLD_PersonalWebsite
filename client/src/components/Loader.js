@@ -1,10 +1,10 @@
 import React from "react";
 import "../assets/css/Loader.css";
 
-const Loader = (props) => {
-  if (props.loading) {
+const Loader = ({ loading, loadScreen }) => {
+  if (loading) {
     return (
-      <div ref={props.loadScreen} className="screen">
+      <div ref={loadScreen} className="screen">
         <div id="loader">
           <div id="shadow"></div>
           <div id="box"></div>

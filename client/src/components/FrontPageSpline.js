@@ -8,6 +8,7 @@ export default function FrontPageSpline({ setPermissionRemoveLoader }) {
   useEffect(() => {
     if (loadedArr.length >= 2) {
       setPermissionRemoveLoader(true);
+      console.log(loadedArr);
     }
   }, [loadedArr, setPermissionRemoveLoader]);
 
@@ -17,6 +18,7 @@ export default function FrontPageSpline({ setPermissionRemoveLoader }) {
     mainSpline.current.style.height = `auto`;
 
     setLoadedArr((current) => [...current, "loaded"]);
+    console.log("loaded");
   };
 
   window.addEventListener("resize", resizeFunc);

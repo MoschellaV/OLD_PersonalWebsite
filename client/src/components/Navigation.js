@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/Navigation.css";
-//import { Button } from "@mantine/core";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
-const Navigation = () => {
+const Navigation = ({ setLoading }) => {
   return (
     <Navbar key="lg" expand="lg" fixed="top" className="">
       <Container fluid className="navbar-position">
@@ -23,21 +23,46 @@ const Navigation = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#action1" className="underline-anim">
-                Home Page
+              <Nav.Link className="underline-anim">
+                <Link
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  to="/"
+                  onClick={() => {
+                    if (window.location.pathname !== "/") {
+                      setLoading(true);
+                    }
+                  }}
+                >
+                  Home Page
+                </Link>
               </Nav.Link>
-              <Nav.Link href="#action2" className="underline-anim">
-                About Me
+              <Nav.Link className="underline-anim">
+                <Link
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  to="/about"
+                >
+                  About Me
+                </Link>
               </Nav.Link>
-              <Nav.Link href="#action3" className="underline-anim">
-                My Projects
+              <Nav.Link className="underline-anim">
+                <Link
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                  to="/projects"
+                >
+                  My Projects
+                </Link>
               </Nav.Link>
-              <Button
-                className="contact-button shrink"
-                variant="outline-primary"
+              <Link
+                style={{ color: "inherit", textDecoration: "inherit" }}
+                to="/contact"
               >
-                Contact
-              </Button>
+                <Button
+                  className="contact-button shrink"
+                  variant="outline-primary"
+                >
+                  Contact
+                </Button>
+              </Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
