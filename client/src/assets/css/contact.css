@@ -1,0 +1,91 @@
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-div {
+  padding-left: 22%;
+}
+.contact-div .contact-header {
+  font-size: clamp(2rem, 7vw, 7.5rem);
+  font-weight: 300;
+}
+.contact-div .contact-subheader {
+  font-size: clamp(1rem, 3vw, 2.1rem);
+  font-weight: 200;
+}
+.contact-div .info {
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+}
+
+.input-field-div {
+  padding-left: 2%;
+}
+
+.input-field-div .contact-button {
+  margin: 0;
+  height: 100%;
+  border: none;
+  font-size: clamp(1rem, 1.15rem, 1.25rem);
+  font-weight: 400;
+  color: white;
+  padding: 5px 15px;
+  text-align: left;
+  margin-left: 0;
+
+  align-items: left;
+}
+
+.text-input {
+  border-bottom-color: white !important;
+  border-color: transparent;
+  border-width: 2px;
+  /* border-radius: 15px; */
+  background-color: transparent;
+  height: 50px;
+  width: 85%;
+  margin: 25px 0;
+}
+.message-input {
+  margin-top: 40px;
+  border-bottom-color: white;
+  border-radius: 10px;
+}
+
+input {
+  padding-left: 10px;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  padding-top: 7px;
+  padding-left: 10px;
+  color: white;
+  min-height: 150px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .contact-div {
+    text-align: center;
+    padding: 0;
+  }
+  .row {
+    padding-top: 100px;
+  }
+  .input-field-div {
+    text-align: center;
+  }
+  html {
+    overflow-y: scroll;
+  }
+}
