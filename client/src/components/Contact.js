@@ -27,7 +27,7 @@ const Contact = () => {
 
     console.log(name, email, message);
     try {
-      await axios.post("http://localhost:4000/post_data", data).then((res) => {
+      await axios.post("/post_data", data).then((res) => {
         if (res.data === "sent") {
           updateNotification({
             id: "load-data",
