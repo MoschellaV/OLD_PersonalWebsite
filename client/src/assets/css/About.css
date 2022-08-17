@@ -4,7 +4,13 @@
   width: 100vw;
   height: 100vh;
 }
-
+.ufo-mobile-gif {
+  position: relative;
+  padding-top: 100px;
+  left: -80px;
+  width: 135vw;
+  height: auto;
+}
 .spline {
   position: absolute;
   margin: 0;
@@ -108,7 +114,8 @@
   }
   .about-content {
     position: relative;
-    padding-top: 300px;
+    top: -100px;
+    padding-top: 1px;
     left: 40px;
     max-width: 300px;
   }

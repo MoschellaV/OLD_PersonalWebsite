@@ -1,14 +1,26 @@
 import React from "react";
 import "../assets/css/About.css";
+import ufoMobile from "../assets/images/ufo-gif.gif";
+
 import UfoSpline from "./UfoSpline";
 import { Container } from "react-bootstrap";
+
+const renderUFO = () => {
+  if (window.innerWidth <= 460) {
+    return <img className="ufo-mobile-gif" alt="" src={ufoMobile} />;
+  } else {
+    return (
+      <div className="ufo-wrapper">
+        <UfoSpline />
+      </div>
+    );
+  }
+};
 
 const About = () => {
   return (
     <Container fluid className="black-background bg-size posiiton-relative">
-      <div className="ufo-wrapper">
-        <UfoSpline />
-      </div>
+      {renderUFO()}
       <div className="about-content">
         <h5 className="header">What I'm Up to</h5>
         <h2 className="sub-header">2022 ~ Present</h2>
