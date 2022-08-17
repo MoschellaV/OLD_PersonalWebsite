@@ -1,12 +1,11 @@
 import React from "react";
 import "../assets/css/Home.css";
 import "font-awesome/css/font-awesome.min.css";
-
 import grid from "../assets/images/grid.png";
 import { Container } from "react-bootstrap";
 import FrontPageSpline from "./FrontPageSpline";
 
-const Home = ({ setPermissionRemoveLoader }) => {
+const Home = ({ setFrontPageSplineLoaded, setPermissionRemoveLoader }) => {
   return (
     <Container fluid className="black-background bg-size posiiton-relative">
       <img src={grid} alt="" className="grid-img"></img>
@@ -27,7 +26,10 @@ const Home = ({ setPermissionRemoveLoader }) => {
         <i className="shrink pt-2 icons fa-2x fa-brands fa-square-facebook" />
       </div>
 
-      <FrontPageSpline setPermissionRemoveLoader={setPermissionRemoveLoader} />
+      <FrontPageSpline
+        setFrontPageSplineLoaded={setFrontPageSplineLoaded}
+        setPermissionRemoveLoader={setPermissionRemoveLoader}
+      />
       <div className="orange-liner"></div>
     </Container>
   );

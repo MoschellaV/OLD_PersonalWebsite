@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Navigation.css";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
-const Navigation = ({ setLoading }) => {
+const Navigation = ({ setFrontPageSplineLoaded, setFadeLoadScreen }) => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeNavBackground = () => {
+    if (window.scrollY >= 20) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavBackground);
+
   return (
-    <Navbar key="lg" expand="lg" fixed="top" className="">
+    <Navbar key="lg" expand="lg" fixed="top" className={navbar ? "active" : ""}>
       <Container fluid className="navbar-position">
         <div>
           <Nav.Link className="nav-name">Vince Moschella</Nav.Link>
@@ -21,6 +33,7 @@ const Navigation = ({ setLoading }) => {
               Vince Moschella
             </Offcanvas.Title>
           </Offcanvas.Header>
+
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="underline-anim">
@@ -29,7 +42,8 @@ const Navigation = ({ setLoading }) => {
                   to="/"
                   onClick={() => {
                     if (window.location.pathname !== "/") {
-                      setLoading(true);
+                      setFrontPageSplineLoaded(false);
+                      setFadeLoadScreen(false);
                     }
                   }}
                 >

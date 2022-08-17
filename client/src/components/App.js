@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "../assets/css/Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Home";
@@ -10,13 +10,13 @@ import Projects from "./Projects";
 import About from "./About";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [permissionRemoveLoader, setPermissionRemoveLoader] = useState(false);
+  const [frontPageSplineLoaded, setFrontPageSplineLoaded] = useState(false);
+  const [fadeLoadScreen, setFadeLoadScreen] = useState(false);
   const [mobileLandscape, setMobileLandscape] = useState(false);
   const loadScreen = useRef();
+  const location = useLocation();
 
   window.addEventListener("resize", function () {
-    console.log("resized");
     if (window.innerHeight <= 460 && window.innerHeight < window.innerWidth) {
       setMobileLandscape(true);
     } else {
@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     /*
-    Forces refrech if the user uses the browsers back 
+    Forces refresh if the user uses the browsers back 
     or forward button to navigate to the home page.  
     This is neccesary so the spline can be loaded
     */
@@ -41,19 +41,21 @@ const App = () => {
     };
   });
 
-  useEffect(() => {
-    if (permissionRemoveLoader) {
-      console.log("permission is true");
-      setTimeout(() => {
-        loadScreen.current.classList.add("fade-out");
+  useEffect(
+    () => {
+      if (frontPageSplineLoaded) {
         setTimeout(() => {
-          setLoading(false);
-        }, 1500);
-      }, 3000);
-      setPermissionRemoveLoader(false);
-      console.log("permisssion set to false");
-    }
-  }, [permissionRemoveLoader]);
+          loadScreen.current.classList.add("fade-out");
+          setTimeout(() => {
+            setFadeLoadScreen(true);
+          }, 1500);
+        }, 3000);
+        setFrontPageSplineLoaded(false);
+      }
+    },
+    [frontPageSplineLoaded],
+    [fadeLoadScreen]
+  );
 
   if (mobileLandscape) {
     return (
@@ -70,19 +72,21 @@ const App = () => {
     );
   } else {
     return (
-      <Router>
-        <Navigation setLoading={setLoading} />
-        <Routes>
+      <>
+        <Navigation
+          setFrontPageSplineLoaded={setFrontPageSplineLoaded}
+          setFadeLoadScreen={setFadeLoadScreen}
+        />
+        <Routes location={location} key={location.pathname}>
           <Route
             path="/"
             element={
               <>
                 <Loader
-                  loading={loading}
+                  fadeLoadScreen={fadeLoadScreen}
                   loadScreen={loadScreen}
-                  setPermissionRemoveLoader={setPermissionRemoveLoader}
                 />
-                <Home setPermissionRemoveLoader={setPermissionRemoveLoader} />
+                <Home setFrontPageSplineLoaded={setFrontPageSplineLoaded} />
               </>
             }
           />
@@ -90,7 +94,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Router>
+      </>
     );
   }
 };

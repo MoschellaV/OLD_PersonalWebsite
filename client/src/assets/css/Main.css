@@ -5,6 +5,10 @@ html {
 }
 body {
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: black;
+
   /* overflow: hidden; */
   position: relative;
 }
@@ -53,4 +57,4 @@ iframe {
     left: 50px;
   } 
 }
-  */
+  */ ;

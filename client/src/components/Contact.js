@@ -64,8 +64,7 @@ const Contact = () => {
   return (
     <Container
       fluid
-      className="black-background bg-size posiiton-relative contact-content 
-    "
+      className="black-background bg-size posiiton-relative contact-content"
     >
       <Row>
         <Col md={6} xs={12}>
@@ -73,10 +72,10 @@ const Contact = () => {
             <h2 className="contact-header">Contact Me</h2>
             <br />
             <h4 className="contact-subheader">Email address</h4>
-            <p className="info">myemailatmy@gmail.com</p>
+            <p className="info">vincemoschella04@gmail</p>
             <br />
             <h4 className="contact-subheader">Phone Number</h4>
-            <p className="info">416-000-0000</p>
+            <p className="info">416-669-2765</p>
           </div>
         </Col>
         <Col style={{ paddingTop: "40px", paddingBottom: "70px" }}>
@@ -108,11 +107,7 @@ const Contact = () => {
                 onChange={(e) => setMeassage(e.target.value)}
               />
               <br />
-              <Button
-                className="contact-button"
-                type="submit"
-                // onClick={postTheData}
-              >
+              <Button className="contact-button" type="submit">
                 Send
               </Button>
             </form>

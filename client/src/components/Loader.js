@@ -1,8 +1,8 @@
 import React from "react";
 import "../assets/css/Loader.css";
 
-const Loader = ({ loading, loadScreen }) => {
-  if (loading) {
+const Loader = ({ fadeLoadScreen, loadScreen }) => {
+  if (!fadeLoadScreen) {
     return (
       <div ref={loadScreen} className="screen">
         <div id="loader">
