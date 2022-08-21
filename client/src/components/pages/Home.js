@@ -1,15 +1,15 @@
 import React from "react";
-import "../assets/css/Home.css";
+import "../../assets/css/Home.css";
+import grid from "../../assets/images/grid.png";
 import "font-awesome/css/font-awesome.min.css";
-import grid from "../assets/images/grid.png";
 import { Container } from "react-bootstrap";
-import FrontPageSpline from "./FrontPageSpline";
+import FrontPageSpline from "../splines/FrontPageSpline";
 
 const Home = ({ setFrontPageSplineLoaded, setPermissionRemoveLoader }) => {
   return (
     <Container fluid className="black-background bg-size posiiton-relative">
       <img src={grid} alt="" className="grid-img"></img>
-      <div className="header position-absolute">
+      <div className="home-content position-absolute">
         <h1 className="main-header">Hey.</h1>
         <h1 className="main-header">I'm Vince</h1>
         <div className="description">

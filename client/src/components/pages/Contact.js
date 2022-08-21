@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../assets/css/ContactPage.css";
-import "../assets/css/Navigation.css";
+import "../../assets/css/ContactPage.css";
+import "../../assets/css/Navigation.css";
 import { showNotification, updateNotification } from "@mantine/notifications";
 import { IconCheck, IconX } from "@tabler/icons";
 import { Button, Container, Row, Col } from "react-bootstrap";

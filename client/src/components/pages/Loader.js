@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Loader.css";
+import "../../assets/css/Loader.css";
 
 const Loader = ({ fadeLoadScreen, loadScreen }) => {
   if (!fadeLoadScreen) {

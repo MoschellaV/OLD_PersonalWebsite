@@ -4,19 +4,6 @@ import Spline from "@splinetool/react-spline";
 export default function FrontPageSpline({ setFrontPageSplineLoaded }) {
   const mainSpline = useRef();
 
-  const resizeFunc = () => {
-    if (window.location.pathname === "/") {
-      try {
-        const test = Math.ceil(window.innerWidth * 0.7);
-        mainSpline.current.style.width = `${test}px`;
-        mainSpline.current.style.height = `auto`;
-      } catch (err) {}
-    } else {
-    }
-  };
-
-  window.addEventListener("resize", resizeFunc);
-
   return (
     <div>
       <Spline

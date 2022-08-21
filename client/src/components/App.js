@@ -2,12 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "../assets/css/Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./Home";
+import Home from "./pages/Home";
 import Navigation from "./Navigation";
-import Loader from "./Loader";
-import Contact from "./Contact";
-import Projects from "./Projects";
-import About from "./About";
+import Loader from "./pages/Loader";
+import Contact from "./pages/Contact";
+import Projects from "./pages/ProjectsPage/Projects";
+import About from "./pages/About";
 
 const App = () => {
   const [frontPageSplineLoaded, setFrontPageSplineLoaded] = useState(false);

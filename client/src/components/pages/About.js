@@ -1,7 +1,7 @@
 import React from "react";
-import "../assets/css/About.css";
-import ufoMobile from "../assets/images/ufo-gif.gif";
-import UfoSpline from "./UfoSpline";
+import "../../assets/css/About.css";
+import ufoMobile from "../../assets/images/ufo-gif.gif";
+import UfoSpline from "../splines/UfoSpline";
 import { Container } from "react-bootstrap";
 
 const renderUFO = () => {

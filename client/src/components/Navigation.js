@@ -36,36 +36,35 @@ const Navigation = ({ setFrontPageSplineLoaded, setFadeLoadScreen }) => {
 
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="underline-anim">
-                <Link
-                  style={{ color: "inherit", textDecoration: "inherit" }}
-                  to="/"
-                  onClick={() => {
-                    if (window.location.pathname !== "/") {
-                      setFrontPageSplineLoaded(false);
-                      setFadeLoadScreen(false);
-                    }
-                  }}
-                >
-                  Home Page
-                </Link>
-              </Nav.Link>
-              <Nav.Link className="underline-anim">
-                <Link
-                  style={{ color: "inherit", textDecoration: "inherit" }}
-                  to="/about"
-                >
-                  About Me
-                </Link>
-              </Nav.Link>
-              <Nav.Link className="underline-anim">
-                <Link
-                  style={{ color: "inherit", textDecoration: "inherit" }}
-                  to="/projects"
-                >
-                  My Projects
-                </Link>
-              </Nav.Link>
+              <Link
+                className="underline-anim nav-link"
+                style={{ color: "white", textDecoration: "inherit" }}
+                to="/"
+                onClick={() => {
+                  if (window.location.pathname !== "/") {
+                    setFrontPageSplineLoaded(false);
+                    setFadeLoadScreen(false);
+                  }
+                }}
+              >
+                Home Page
+              </Link>
+
+              <Link
+                className="underline-anim nav-link"
+                style={{ color: "white", textDecoration: "inherit" }}
+                to="/about"
+              >
+                About Me
+              </Link>
+
+              <Link
+                className="underline-anim nav-link"
+                style={{ color: "white", textDecoration: "inherit" }}
+                to="/projects"
+              >
+                My Projects
+              </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "inherit" }}
                 to="/contact"

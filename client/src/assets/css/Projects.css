@@ -1,0 +1,121 @@
+.floating-tabs-wrapper {
+  background-color: black;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.projects-description-content {
+  color: white;
+  min-height: 1000px;
+}
+.projects-button {
+  position: absolute !important;
+  top: 85vh;
+  left: 45vw;
+  color: white;
+  border-color: white;
+  backdrop-filter: blur(50px);
+}
+.mini-description {
+  background-color: black;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mini-description-container {
+  max-width: 800px;
+}
+.mini-description .header {
+  color: white;
+  opacity: 0.18;
+  font-size: clamp(1.4rem, 3vw, 3rem);
+}
+.mini-description .text {
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  line-height: 1.7;
+}
+.project-template-container {
+  background-color: black;
+  height: 90vh;
+}
+.project-template-container .row-normal {
+  margin: 0 auto;
+}
+.project-template-container .row-flipped {
+  margin: 0 auto;
+  flex-direction: row-reverse;
+}
+.project-template-container .header {
+  font-size: clamp(1.4rem, 2.2vw, 2.5rem);
+}
+.project-template-container .sub-header {
+  font-size: clamp(2.5rem, 5.4vw, 6.4rem);
+}
+.project-template-container .text {
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  line-height: 1.7;
+}
+.project-template-container .view-code-button {
+  color: white;
+  border-color: white;
+  margin-left: 30px;
+}
+.project-template-container .project-wrapper-normal {
+  padding: 15vw 40px 15vw 12vw;
+}
+.project-template-container .project-wrapper-flipped {
+  padding: 15vw 12vw 15vw 40px;
+}
+.project-template-container .spline-wrapper-normal {
+  padding-right: 60px;
+  height: 100vh;
+  width: 100%;
+}
+.project-template-container .spline-wrapper-flipped {
+  padding-left: 60px;
+  height: 100vh;
+  width: 100%;
+}
+.projects-spline {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+  .floating-tabs-wrapper {
+    padding-top: 120px;
+    width: 100vw;
+    height: auto;
+    transform: scale(1.4);
+  }
+  .projects-button {
+    visibility: hidden;
+  }
+  .mini-description {
+    height: 30vh;
+  }
+  .mini-description-container {
+    max-width: 350px;
+    padding-top: 200px;
+  }
+  .project-template-container {
+    height: inherit;
+  }
+  .projects-spline {
+    width: 100vw !important;
+    height: 58vh;
+    transform: scale(0.7);
+  }
+  .project-template-container .spline-wrapper-normal {
+    padding: 0;
+    height: 50vh;
+    width: 100vw;
+  }
+  .project-template-container .spline-wrapper-flipped {
+    padding: 0;
+    height: auto;
+    width: 100vw;
+  }
+}
