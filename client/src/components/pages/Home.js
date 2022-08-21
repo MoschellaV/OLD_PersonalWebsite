@@ -4,8 +4,28 @@ import grid from "../../assets/images/grid.png";
 import "font-awesome/css/font-awesome.min.css";
 import { Container } from "react-bootstrap";
 import FrontPageSpline from "../splines/FrontPageSpline";
+import codingHeadMobile from "../../assets/images/codingHead.gif";
 
-const Home = ({ setFrontPageSplineLoaded, setPermissionRemoveLoader }) => {
+const Home = ({ setFrontPageSplineLoaded }) => {
+  const renderCodingHead = () => {
+    if (window.innerWidth <= 460) {
+      return (
+        <img
+          onLoad={() => {
+            setFrontPageSplineLoaded(true);
+          }}
+          className="coding-head-gif"
+          alt=""
+          src={codingHeadMobile}
+        />
+      );
+    } else {
+      return (
+        <FrontPageSpline setFrontPageSplineLoaded={setFrontPageSplineLoaded} />
+      );
+    }
+  };
+
   return (
     <Container fluid className="black-background bg-size posiiton-relative">
       <img src={grid} alt="" className="grid-img"></img>
@@ -26,10 +46,7 @@ const Home = ({ setFrontPageSplineLoaded, setPermissionRemoveLoader }) => {
         <i className="shrink pt-2 icons fa-2x fa-brands fa-square-facebook" />
       </div>
 
-      <FrontPageSpline
-        setFrontPageSplineLoaded={setFrontPageSplineLoaded}
-        setPermissionRemoveLoader={setPermissionRemoveLoader}
-      />
+      {renderCodingHead()}
       <div className="orange-liner"></div>
     </Container>
   );

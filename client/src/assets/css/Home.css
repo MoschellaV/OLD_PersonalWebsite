@@ -46,6 +46,11 @@
   font-weight: 500;
   font-size: clamp(1.1rem, 1.8vw, 2rem);
 }
+.resize-main-spline {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+}
 .orange-liner {
   position: absolute;
   left: -100px;
@@ -170,7 +175,7 @@
     left: -90px;
   }
   .home-content {
-    padding-top: 22vh;
+    padding-top: 21vh;
   }
   .home-content .description {
     margin-left: 15%;
@@ -178,14 +183,21 @@
     max-width: 300px;
   }
   .grid-img {
-    width: 150px;
+    width: 140px;
     height: auto;
-    left: 120px;
-    top: 120px;
+    left: 130px;
+    top: 90px;
   }
   .icon-div {
     padding-top: 16vh;
     padding-left: 82vw;
+  }
+  .coding-head-gif {
+    position: absolute;
+    bottom: 0;
+    right: -110px;
+    width: 150vw;
+    height: auto;
   }
 }
 
