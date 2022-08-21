@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import "../assets/css/Main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Navigation from "./Navigation";
