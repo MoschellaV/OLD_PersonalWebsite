@@ -85,6 +85,7 @@ const Projects = () => {
       <ProjectTemplate myProject={project1} isFlipped={true}>
         <BoxSpline />
       </ProjectTemplate>
+      <div style={{ backgroundColor: "black", height: "350px" }}></div>
     </>
   );
 };
