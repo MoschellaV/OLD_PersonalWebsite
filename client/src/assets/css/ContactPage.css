@@ -8,8 +8,8 @@
   padding-left: 22%;
 }
 .contact-div .contact-header {
-  font-size: clamp(2rem, 7vw, 7.5rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 6.7vw, 7.5rem);
+  font-weight: 400;
 }
 .contact-div .contact-subheader {
   font-size: clamp(1rem, 3vw, 2.1rem);

@@ -20,6 +20,9 @@
   margin-left: 10px;
   margin-right: 30px;
 }
+.navbar.active {
+  background-color: black;
+}
 .navbar .nav-link.active {
   color: white !important;
   opacity: 100% !important;
@@ -31,7 +34,7 @@
   color: white;
   opacity: 0.95;
   background-color: black;
-  width: 50vw !important;
+  width: 60vw !important;
 }
 .offcanvas-header {
   padding-top: 30px;

@@ -1,0 +1,129 @@
+.ufo-wrapper {
+  background-color: black;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.ufo-mobile-gif {
+  position: relative;
+  padding-top: 100px;
+  left: -80px;
+  width: 135vw;
+  height: auto;
+}
+.spline {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+}
+
+.about-content {
+  position: absolute;
+  right: 9%;
+  top: 26%;
+  max-width: 700px;
+}
+
+.about-content .header {
+  padding: 0;
+  opacity: 0.3;
+  color: white;
+  font-size: clamp(1rem, 2.2vw, 2.5rem);
+
+  /* font-size: clamp(1rem, 1.8vw, 2.2rem); */
+  font-weight: 300;
+}
+.about-content .sub-header {
+  font-size: clamp(2rem, 5.4vw, 6.4rem);
+  padding: 10px 0;
+}
+.about-content .text {
+  font-size: clamp(0.8rem, 1.5vw, 1.6rem);
+  line-height: 1.7;
+  /* font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+  opacity: 0.5;
+  font-weight: 200;
+  line-height: 2.3;
+  margin: 0; */
+}
+
+@media only screen and (min-width: 1600px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-50px) translateY(100px);
+  }
+  .about-content {
+    max-width: 800px;
+  }
+}
+@media only screen and (min-width: 1251px) and (max-width: 1599px) {
+  .ufo-spline {
+    transform: scale(1.1) translateX(-50px) translateY(50px);
+  }
+  .about-content {
+    max-width: 660px;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1250px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-50px) translateY(100px);
+  }
+  .about-content {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 920px) and (max-width: 1100px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-50px) translateY(100px);
+  }
+  .about-content {
+    max-width: 450px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 920px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-20px) translateY(100px);
+  }
+  .about-content {
+    max-width: 350px;
+    right: 6%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 750px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-20px) translateY(100px);
+  }
+  .about-content {
+    max-width: 280px;
+  }
+}
+@media only screen and (min-width: 440px) and (max-width: 600px) {
+  .ufo-spline {
+    transform: scale(1.2) translateX(-20px) translateY(100px);
+  }
+  .about-content {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 460px) {
+  .ufo-wrapper {
+    height: 10vh;
+    width: 100vw;
+  }
+  .ufo-spline {
+    width: inherit !important;
+    transform: scale(2.5) translateX(65px) translateY(90px);
+  }
+  .about-content {
+    position: relative;
+    top: -100px;
+    padding-top: 1px;
+    left: 40px;
+    max-width: 300px;
+  }
+  .about-content .text {
+    padding-bottom: 70px;
+  }
+}

@@ -26,18 +26,18 @@
   height: 250px;
   z-index: 99;
 }
-.header {
+.home-content {
   padding-top: 22vh;
   padding-left: 5vw;
   max-width: 900px;
   z-index: 10;
 }
-.header .main-header {
+.home-content .main-header {
   margin: 0;
   font-size: clamp(2.6rem, 7.1vw, 8.8rem);
   font-weight: 700;
 }
-.description {
+.home-content .description {
   margin-left: 18%;
   margin-top: 10%;
   max-width: 400px;
@@ -45,6 +45,11 @@
 .description .main-description {
   font-weight: 500;
   font-size: clamp(1.1rem, 1.8vw, 2rem);
+}
+.resize-main-spline {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
 }
 .orange-liner {
   position: absolute;
@@ -57,14 +62,25 @@
 }
 
 @media only screen and (min-width: 1600px) {
+  .resize-main-spline {
+    transform: scale(1.15);
+  }
   .grid-img {
     width: 350px;
     height: 350px;
     left: 375px;
   }
 }
+
+@media only screen and (min-width: 1251px) and (max-width: 1599px) {
+  .resize-main-spline {
+    transform: scale(0.95) translateY(8vh) translateX(6vw);
+  }
+}
+
 @media only screen and (min-width: 1100px) and (max-width: 1250px) {
   .resize-main-spline {
+    transform: scale(0.9);
     width: 85vw !important;
     height: auto !important;
     left: 300px;
@@ -158,23 +174,30 @@
     height: auto !important;
     left: -90px;
   }
-  .header {
-    padding-top: 16vh;
+  .home-content {
+    padding-top: 21vh;
   }
-  .description {
+  .home-content .description {
     margin-left: 15%;
     margin-top: 7%;
     max-width: 300px;
   }
   .grid-img {
-    width: 90px;
-    height: 90px;
-    left: 150px;
-    top: 100px;
+    width: 140px;
+    height: auto;
+    left: 130px;
+    top: 90px;
   }
   .icon-div {
     padding-top: 16vh;
     padding-left: 82vw;
+  }
+  .coding-head-gif {
+    position: absolute;
+    bottom: 0;
+    right: -110px;
+    width: 150vw;
+    height: auto;
   }
 }
 
