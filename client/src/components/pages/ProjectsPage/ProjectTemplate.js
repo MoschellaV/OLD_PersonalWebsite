@@ -37,10 +37,7 @@ const ProjectTemplate = ({ myProject, isFlipped, children }) => {
           <div style={{ maxWidth: "800px" }}>
             <h5 className="header">{myProject.header}</h5>
             <h2 className="sub-header">{myProject.subHeader}</h2>
-            <div>
-              {renderedLogos}
-              {/* <img alt="" src={myProject.technologies.logoReact} /> */}
-            </div>
+            <div>{renderedLogos}</div>
             <p className="text">{myProject.description}</p>
             <Button
               className="view-site-button"
