@@ -137,9 +137,9 @@
     height: inherit;
   }
   .projects-spline {
-    width: 110vw !important;
-    height: 63vh;
-    transform: scale(0.7) translateX(-60px);
+    width: 130vw !important;
+    height: 80vh;
+    transform: scale(0.6) translateX(-120px);
   }
   .project-template-container .spline-wrapper-normal {
     padding: 0;

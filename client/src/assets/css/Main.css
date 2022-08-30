@@ -1,10 +1,12 @@
 html {
   background-color: black;
 }
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+}
 body {
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: black;
   position: relative;
 }
