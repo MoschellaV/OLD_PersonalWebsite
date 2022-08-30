@@ -36,6 +36,30 @@
   font-size: clamp(1rem, 1.5vw, 1.6rem);
   line-height: 1.7;
 }
+
+.mini-description .bobbing-arrow {
+  font-size: 5em;
+  color: white;
+  opacity: 0.18;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
 .project-template-container {
   background-color: black;
   height: 90vh;
@@ -52,6 +76,7 @@
 }
 .project-template-container .sub-header {
   font-size: clamp(2.5rem, 5.4vw, 6.4rem);
+  margin: 0;
 }
 .project-template-container .text {
   font-size: clamp(1rem, 1.5vw, 1.6rem);
@@ -62,6 +87,11 @@
   border-color: white;
   margin-left: 30px;
 }
+.project-template-container .view-site-button:hover {
+  color: white;
+  opacity: 0.9;
+}
+
 .project-template-container .project-wrapper-normal {
   padding: 15vw 40px 15vw 12vw;
 }
@@ -99,6 +129,9 @@
   .mini-description-container {
     max-width: 350px;
     padding-top: 200px;
+  }
+  .mini-description .bobbing-arrow {
+    visibility: hidden;
   }
   .project-template-container {
     height: inherit;
