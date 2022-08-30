@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import "../../../assets/css/Projects.css";
 import { Container } from "react-bootstrap";
 import { Button } from "@mantine/core";
-
-// import FloatingTabsSpline from "../../splines/FloatingTabsSpline";
 import ProjectTemplate from "./ProjectTemplate";
-import BoxSpline from "../../splines/BoxSpline";
-import { project1 } from "./projectsDescriptions/MyProjects";
+import CraftACardSpline from "../../splines/CraftACardSpline";
+import { project1 } from "./MyProjects";
 import floatingTabsMobile from "../../../assets/images/floatingtabs.gif";
 
 const Projects = () => {
@@ -70,21 +68,20 @@ const Projects = () => {
       </div>
       <Container fluid id="mini-description" className="mini-description">
         <div className="mini-description-container">
-          <h5 className="header">I'm not just a web developer</h5>
+          <h5 className="header">Check out some of my work</h5>
+
           <p className="text">
-            Praesent hendrerit quam et orci imperdiet ullamcorper. In id varius
-            elit. Suspendisse leo risus, vulputate ut nibh eu, fringilla
-            efficitur massa. Nulla malesuada dui in condimentum pulvinar. Cras
-            gravida rutrum neque.
+            When I have a cool idea, I open up VS code and then somehow end up
+            on stack overflow 30 minutes later! Anyway, my personal projects
+            showcase some of the languages and frameworks that I have used.
           </p>
+          <i className="bobbing-arrow fa-solid pt-4 fa-down-long"></i>
         </div>
       </Container>
       <ProjectTemplate myProject={project1} isFlipped={false}>
-        <BoxSpline />
+        <CraftACardSpline />
       </ProjectTemplate>
-      <ProjectTemplate myProject={project1} isFlipped={true}>
-        <BoxSpline />
-      </ProjectTemplate>
+
       <div style={{ backgroundColor: "black", height: "350px" }}></div>
     </>
   );
