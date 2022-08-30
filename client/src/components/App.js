@@ -23,9 +23,7 @@ const App = () => {
     }
   });
 
-  useEffect(() => {
-    console.log("rerender");
-  }, [mobileLandscape]);
+  useEffect(() => {}, [mobileLandscape]);
 
   useEffect(() => {
     /*

@@ -112,6 +112,45 @@
   height: 100%;
   width: 100%;
 }
+@media only screen and (min-width: 1220px) and (max-width: 1350px) {
+  .projects-spline {
+    transform: scale(0.8) translateX(-40px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+  .projects-button {
+    top: 80vh;
+    left: 42vw;
+  }
+  .projects-spline {
+    transform: scale(0.7);
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1000px) {
+  .projects-button {
+    top: 80vh;
+    left: 40vw;
+  }
+  .projects-spline {
+    transform: scale(0.7);
+  }
+}
+@media only screen and (min-width: 460px) and (max-width: 760px) {
+  .projects-button {
+    top: 80vh;
+    left: 40vw;
+  }
+  .mini-description-container {
+    max-width: 500px;
+    padding-top: 60px;
+  }
+  .row-normal {
+    padding-top: 0;
+  }
+  .projects-spline {
+    transform: scale(1);
+  }
+}
 
 @media (max-width: 460px) {
   .floating-tabs-wrapper {

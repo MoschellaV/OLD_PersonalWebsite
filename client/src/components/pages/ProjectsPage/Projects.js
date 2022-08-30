@@ -9,7 +9,6 @@ import floatingTabsMobile from "../../../assets/images/floatingtabs.gif";
 
 const Projects = () => {
   const [splineLoaded, setSplineLoaded] = useState(false);
-  console.log(splineLoaded);
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 460) {

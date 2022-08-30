@@ -44,19 +44,23 @@ const Home = ({ setFrontPageSplineLoaded }) => {
         <a
           href="https://github.com/MoschellaV"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
-          <i className="shrink icons fa-2x fa-brands fa-square-github" />
+          <i className="shrink ms-2 me-2 icons fa-2x fa-brands fa-square-github" />
         </a>
         <a
           href="https://www.linkedin.com/in/vince-moschella-0994b1226/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
-          <i className="shrink pt-2 icons fa-2x fa-brands fa-linkedin" />
+          <i className="shrink ms-2 me-2 pt-2 icons fa-2x fa-brands fa-linkedin" />
         </a>
-        <a href="https://www.w3schools.com" target="_blank" rel="noreferrer">
-          <i className="shrink pt-2 icons fa-2x fa-brands fa-square-facebook" />
+        <a
+          href="https://www.instagram.com/vince_moschella/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="shrink ms-2 me-2 pt-2 icons fa-2x fa-brands fa-square-instagram"></i>
         </a>
       </div>
 

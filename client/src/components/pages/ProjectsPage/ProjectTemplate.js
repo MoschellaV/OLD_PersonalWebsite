@@ -1,17 +1,14 @@
 import React from "react";
 import "../../../assets/css/Projects.css";
-//import "../../../assets/images/codePNGS/react.png";
-
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "@mantine/core";
 
 const ProjectTemplate = ({ myProject, isFlipped, children }) => {
   const logos = Object.values(myProject.technologies);
-  console.log(logos);
-
   const renderedLogos = logos.map((logo) => {
     return (
       <img
+        key={logo}
         style={{
           filter: "brightness(0) invert(1)",
           margin: "2px 10px 15px 7px",
