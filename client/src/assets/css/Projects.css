@@ -48,6 +48,12 @@
   margin-left: 30px;
   margin-top: 5px;
 }
+.view-code-button {
+  -webkit-appearance: none;
+}
+.view-site-button {
+  -webkit-appearance: none;
+}
 
 @keyframes floating {
   0% {

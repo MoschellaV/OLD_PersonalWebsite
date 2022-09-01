@@ -49,11 +49,11 @@ const ProjectTemplate = ({ myProject, isFlipped, children }) => {
               {myProject.button1Text}
             </Button>
             <Button
+              className="view-code-button"
               component="a"
               target="_blank"
               rel="noopener noreferrer"
               href={myProject.button2Href}
-              className="view-code-button"
               variant="outline"
               radius="md"
               size="lg"
