@@ -54,11 +54,11 @@
 .orange-liner {
   position: absolute;
   left: -100px;
-  bottom: 0px;
-
+  bottom: -50px;
   background-color: #dc6809;
   width: 1050vw;
   height: 10px;
+  padding-bottom: 60px;
 }
 
 @media only screen and (min-width: 1600px) {

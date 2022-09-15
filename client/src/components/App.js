@@ -34,6 +34,7 @@ const App = () => {
     window.onpopstate = () => {
       if (window.location.pathname === "/") {
         window.location.reload();
+      } else {
       }
     };
   });
