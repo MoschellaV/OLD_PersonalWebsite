@@ -4,9 +4,10 @@ import { Container } from "react-bootstrap";
 import { Button } from "@mantine/core";
 import ProjectTemplate from "./ProjectTemplate";
 import CraftACardSpline from "../../splines/CraftACardSpline";
-import { project1, project2 } from "./MyProjects";
+import { project1, project2, project3 } from "./MyProjects";
 import floatingTabsMobile from "../../../assets/images/floatingtabs.gif";
 import SortingVisualizer from "../../splines/SortingVisualizer";
+import ControllerSpline from "../../splines/ControllerSpline";
 
 const Projects = () => {
   const [splineLoaded, setSplineLoaded] = useState(false);
@@ -83,6 +84,9 @@ const Projects = () => {
       </ProjectTemplate>
       <ProjectTemplate myProject={project2} isFlipped={false}>
         <SortingVisualizer />
+      </ProjectTemplate>
+      <ProjectTemplate myProject={project3} isFlipped={false}>
+        <ControllerSpline />
       </ProjectTemplate>
 
       <div style={{ backgroundColor: "black", height: "350px" }}></div>

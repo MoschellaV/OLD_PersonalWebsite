@@ -31,3 +31,17 @@ export const project2 = {
   button2Text: "View Code",
   button2Href: "https://github.com/MoschellaV/SortingVisualizer",
 };
+export const project3 = {
+  header: "Project #3",
+  subHeader: "Kuiper Space",
+  technologies: {
+    logoUnity: require("../../../assets/images/codePNGS/unity.png"),
+    logoCSharp: require("../../../assets/images/codePNGS/csharp.png"),
+  },
+  description:
+    "Games are fun, so I built a one for a high school project! I was completely new to unity nonetheless,  I ended making what I think isn't a bad first game. It's got some bugs for sure, but with a public leaderboard and cool game mechanics it kept my peers entertained during those boring classes.",
+  button1Text: "Play Game",
+  button1Href: "https://vmoschella.itch.io/kuiper-space",
+  button2Text: "View Code",
+  button2Href: "https://github.com/MoschellaV/KuiperSpace",
+};
