@@ -39,7 +39,7 @@ export const project3 = {
     logoCSharp: require("../../../assets/images/codePNGS/csharp.png"),
   },
   description:
-    "Games are fun, so I built a one for a high school project! I was completely new to unity nonetheless,  I ended making what I think isn't a bad first game. It's got some bugs for sure, but with a public leaderboard and cool game mechanics it kept my peers entertained during those boring classes.",
+    "Games are fun, so I built one for a high school project. But be warned it's got some bugs. Nonetheless the public leaderboard and cool game mechanics kept my peers entertained during those boring classes.",
   button1Text: "Play Game",
   button1Href: "https://vmoschella.itch.io/kuiper-space",
   button2Text: "View Code",
